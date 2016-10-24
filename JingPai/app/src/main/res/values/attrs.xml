@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XLTabLayout">
+        <attr name="text_normal_color" format="reference|color"/>
+        <attr name="text_selected_color" format="reference|color"/>
+        <attr name="tab_indicator_color" format="reference|color"/>
+        <attr name="text_size" format="reference|dimension"/>
+    </declare-styleable>
+</resources>
