@@ -1,0 +1,38 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi()//gradle sdk
+    compile localGroovy()//groovy sdk
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+group='com.dd.cc'     //这个命名也是随意的，和包名无关，其他module引用的时候如
+version='1.0.0'
+
+/**
+ dependencies {
+ //格式为-->group:module:version
+ classpath 'com.dd.cc:cacheok:1.0.0'  //cacheok是module名 1.0.0 是版本号
+ }
+
+ //com.abc.xiaoming  为resources/META-INF/gradle-plugins
+ //下的properties文件名称
+ apply plugin: 'com.abc.xiaoming'  也和包名无关
+ */
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+            repository(url: uri('/Users/ruulai/Test2'))
+        }
+    }
+}
